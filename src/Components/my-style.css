@@ -142,17 +142,18 @@ h6 {
 .bubble-container__list {
   width: 100%;
   display: flex;
-  padding: 0;
+  padding: 0 30px;
 }
 
 .bubble-container__list>div {
-  animation: fall 15s infinite linear;
+  margin: 0 15px;
+  animation: fall 12s infinite linear;
 }
 
 .bubble-container__list svg {
   width: 50px;
   height: 50px;
-  animation: snowfall 15s infinite linear;
+  animation: snowfall 13s infinite linear;
 }
 
 @keyframes snowfall {
