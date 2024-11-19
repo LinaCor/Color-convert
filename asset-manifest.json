@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/Color-convert/static/css/main.be8b27c2.css",
+    "main.js": "/Color-convert/static/js/main.51ab1288.js",
+    "static/media/copy-regular.svg": "/Color-convert/static/media/copy-regular.e53d5adb054252517aee.svg",
+    "index.html": "/Color-convert/index.html",
+    "main.be8b27c2.css.map": "/Color-convert/static/css/main.be8b27c2.css.map",
+    "main.51ab1288.js.map": "/Color-convert/static/js/main.51ab1288.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.be8b27c2.css",
+    "static/js/main.51ab1288.js"
+  ]
+}
