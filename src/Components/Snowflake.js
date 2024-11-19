@@ -1,3 +1,4 @@
+import { v4 as uuidv4 } from 'uuid';
 import { useEffect, useState } from 'react';
 import './my-style.css'
 
@@ -17,15 +18,8 @@ export default function Snowflake({ rgbColor }) {
   }
 
   useEffect(() => {
-    setSnow(prev => [...prev, <Snowitem lightColor={lightColor} />])
+    setSnow(prev => [...prev, <Snowitem key={uuidv4()} lightColor={lightColor} />])
   }, [lightColor])
-
-  //useEffect(() => {
-  //  const intervalId = setInterval(() => {
-  //    setSnow(prev => [...prev, <Snowitem lightColor={lightColor} />])
-  //  }, 1000);
-  //  return () => clearInterval(intervalId);
-  //}, [lightColor]);
 
   return <>
     <div className="bubble-container">
@@ -35,6 +29,8 @@ export default function Snowflake({ rgbColor }) {
     </div>
   </>
 }
+
+
 
 
 

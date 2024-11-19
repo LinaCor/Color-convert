@@ -25,9 +25,18 @@ function ColorFix({ color, setColor, rgbColor, setRgbColor }) {
       setRgbColor(rgbColorValue)
     }
     else if (!isValueValid(color) && color.length >= 7) {
-      setRgbColor('Ошибка! Цвета не существует :(');
+      setRgbColor('Цвета не существует :(');
     }
   }, [color, setRgbColor]);
+
+  const copyTextToClipboard = async (text) => {
+    try {
+      await navigator.clipboard.writeText(text);
+      console.log('Текст успешно скопирован в буфер обмена!');
+    } catch (err) {
+      console.error('Ошибка:', err);
+    }
+  };
 
   return (
     <>
@@ -36,6 +45,7 @@ function ColorFix({ color, setColor, rgbColor, setRgbColor }) {
           <input className="color-container__input" onChange={handleChange} maxLength="7" />
           <div className="color-container__value">
             <p>{rgbColor}</p>
+            <button className="value-btn" onClick={() => copyTextToClipboard(rgbColor)}></button>
           </div>
         </div>
       </div >
