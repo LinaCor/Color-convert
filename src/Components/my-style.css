@@ -142,17 +142,17 @@ h6 {
 .bubble-container__list {
   width: 100%;
   display: flex;
-  padding: 0 30px;
 }
 
 .bubble-container__list>div {
-  margin: 0 15px;
+  margin: 0 35px;
   animation: fall 12s infinite linear;
 }
 
 .bubble-container__list svg {
-  width: 50px;
-  height: 50px;
+  max-width: 100px;
+  width: 100%;
+  max-height: 100px;
   animation: snowfall 13s infinite linear;
 }
 
@@ -177,7 +177,19 @@ h6 {
   }
 
   100% {
-    transform: translateY(93vh);
+    transform: translateY(85vh);
     opacity: 0;
+  }
+}
+
+@media (max-width:1200px) {
+  .bubble-container__list>div {
+    margin: 0 15px;
+  }
+}
+
+@media (max-width:767px) {
+  .bubble-container__list>div {
+    margin: 0 5px;
   }
 }

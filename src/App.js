@@ -7,8 +7,6 @@ function App() {
   const [color, setColor] = useState('');
   const [rgbColor, setRgbColor] = useState('rgb(x, x, x)');
 
-  console.log(color)
-
   return (
     <>
       <Snowflake rgbColor={rgbColor} />
